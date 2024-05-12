@@ -1,22 +1,25 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Random Quote Generator</title>
-        <link rel="icon" href="logo.png">
-        <link rel="stylesheet" href="style.css">
-    </head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate Quotes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/logo.png">
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="quote-box">
+      <h3>Quote of the day</h3>
+      <br />
+      <blockquote id="quote">Loading.....</blockquote>
+      <br />
+      <span id="author">Loading.....</span>
 
-    <body>
-        <h1>Random Quote Generator</h1>
-        <div id="container">
-            <h2 id="quote"/>
-            <br> <br>
-        </div>
-        <div id="btn">
-            <button onclick="generate()">
-                <span>Generate</span>
-            </button>
-            <script src="script.js"></script>
-        </div>
-    </body>
+      <div class="buttons">
+        <button id="newQuotes" onclick="getQuote(api_url)">New Quotes</button>
+        <button id="share" onclick=" share()">Share</button>
+      </div>
+    </div>
+  </body>
 </html>
