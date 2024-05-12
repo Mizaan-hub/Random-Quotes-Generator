@@ -1,5 +1,6 @@
 const quote = document.getElementById("quote");
 const author = document.getElementById("author");
+const body = document.getElementsByTagName("body")[0]
 
 const api_url = "https://api.quotable.io/random";
 
@@ -10,6 +11,14 @@ async function getQuote(url) {
   // console.log(data);
   quote.innerHTML = data.content;
   author.innerHTML = data.author;
+
+  const red = Math.round(Math.random()*255)
+    const green = Math.round(Math.random()*255)
+    const blue = Math.round(Math.random()*255)
+
+    const color = `rgb(${red},${green},${blue})`
+    body.style.backgroundColor = color;
+    
 }
 
 getQuote(api_url);
